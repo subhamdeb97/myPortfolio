@@ -53,11 +53,11 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 glass-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">Let's Work Together</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4">Let's Work Together</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Ready to bring your project to life? I'd love to hear about your ideas and discuss how we can create something amazing together.
           </p>
         </div>
@@ -66,65 +66,65 @@ export default function ContactSection() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">Get In Touch</h3>
-              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+              <h3 className="text-2xl font-bold text-white mb-6">Get In Touch</h3>
+              <p className="text-lg text-gray-300 leading-relaxed mb-8">
                 Whether you need a Salesforce solution, a full-stack web application, or AI-driven business platform, I'm here to help turn your vision into reality.
               </p>
             </div>
             
             <div className="space-y-6">
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                  <Mail className="text-primary" size={24} />
+                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
+                  <Mail className="text-blue-300" size={24} />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-500">Email</div>
-                  <div className="text-lg font-medium text-slate-900">subham.deb@example.com</div>
+                  <div className="text-sm text-gray-400">Email</div>
+                  <div className="text-lg font-medium text-white">subham.deb@example.com</div>
                 </div>
               </div>
               
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                  <Phone className="text-primary" size={24} />
+                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
+                  <Phone className="text-blue-300" size={24} />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-500">Phone</div>
-                  <div className="text-lg font-medium text-slate-900">+1 (555) 123-4567</div>
+                  <div className="text-sm text-gray-400">Phone</div>
+                  <div className="text-lg font-medium text-white">+1 (555) 123-4567</div>
                 </div>
               </div>
               
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                  <MapPin className="text-primary" size={24} />
+                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
+                  <MapPin className="text-blue-300" size={24} />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-500">Location</div>
-                  <div className="text-lg font-medium text-slate-900">Available for Remote Work</div>
+                  <div className="text-sm text-gray-400">Location</div>
+                  <div className="text-lg font-medium text-white">Available for Remote Work</div>
                 </div>
               </div>
             </div>
             
-            <div className="bg-white rounded-2xl p-8 border border-gray-200">
-              <h4 className="text-lg font-semibold text-slate-900 mb-4">What I Can Help With</h4>
-              <ul className="space-y-3 text-gray-600">
+            <div className="glass-card rounded-2xl p-8">
+              <h4 className="text-lg font-semibold text-white mb-4">What I Can Help With</h4>
+              <ul className="space-y-3 text-gray-300">
                 <li className="flex items-center">
-                  <CheckCircle className="text-primary mr-3" size={16} />
+                  <CheckCircle className="text-blue-300 mr-3" size={16} />
                   Salesforce Development & Customization
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-primary mr-3" size={16} />
+                  <CheckCircle className="text-blue-300 mr-3" size={16} />
                   Full-Stack Web Application Development
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-primary mr-3" size={16} />
+                  <CheckCircle className="text-blue-300 mr-3" size={16} />
                   AI Platform Integration & Development
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-primary mr-3" size={16} />
+                  <CheckCircle className="text-blue-300 mr-3" size={16} />
                   Cloud Integration & Migration
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="text-primary mr-3" size={16} />
+                  <CheckCircle className="text-blue-300 mr-3" size={16} />
                   System Architecture & Consulting
                 </li>
               </ul>
@@ -132,9 +132,9 @@ export default function ContactSection() {
           </div>
           
           {/* Contact Form */}
-          <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm">
+          <div className="glass-card rounded-2xl p-8">
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 glass-form">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <FormField
                     control={form.control}
@@ -147,6 +147,7 @@ export default function ContactSection() {
                             placeholder="Your full name" 
                             {...field} 
                             data-testid="input-name"
+                            className="glass-input"
                           />
                         </FormControl>
                         <FormMessage />
@@ -166,6 +167,7 @@ export default function ContactSection() {
                             placeholder="your.email@example.com" 
                             {...field} 
                             data-testid="input-email"
+                            className="glass-input"
                           />
                         </FormControl>
                         <FormMessage />
@@ -185,6 +187,7 @@ export default function ContactSection() {
                           placeholder="Your company name (optional)" 
                           {...field} 
                           data-testid="input-company"
+                          className="glass-input"
                         />
                       </FormControl>
                       <FormMessage />
@@ -200,7 +203,7 @@ export default function ContactSection() {
                       <FormLabel>Project Type *</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
-                          <SelectTrigger data-testid="select-project-type">
+                          <SelectTrigger data-testid="select-project-type" className="glass-input">
                             <SelectValue placeholder="Select project type" />
                           </SelectTrigger>
                         </FormControl>
@@ -227,7 +230,7 @@ export default function ContactSection() {
                       <FormControl>
                         <Textarea 
                           placeholder="Tell me about your project, timeline, budget, and any specific requirements..."
-                          className="resize-none"
+                          className="resize-none glass-input"
                           rows={6}
                           {...field} 
                           data-testid="textarea-message"
@@ -241,7 +244,7 @@ export default function ContactSection() {
                 <Button 
                   type="submit" 
                   disabled={contactMutation.isPending}
-                  className="w-full bg-primary text-white font-medium py-4 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-colors duration-200"
+                  className="w-full glass-button font-medium py-4 rounded-lg text-white"
                   data-testid="button-submit"
                 >
                   {contactMutation.isPending ? (

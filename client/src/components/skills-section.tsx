@@ -53,11 +53,11 @@ export default function SkillsSection() {
   };
 
   return (
-    <section id="skills" className="py-20 bg-gray-50">
+    <section id="skills" className="py-20 glass-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">Technical Skills</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4">Technical Skills</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             A comprehensive toolkit spanning Salesforce ecosystem and modern web technologies
           </p>
         </div>
@@ -70,14 +70,14 @@ export default function SkillsSection() {
             return (
               <div 
                 key={category.title}
-                className="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300"
+                className="glass-card rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:transform hover:scale-105"
                 data-testid={`skill-category-${category.title.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 <div className="flex items-center mb-6">
                   <div className={`w-12 h-12 ${colors.bg} rounded-lg flex items-center justify-center mr-4`}>
                     <IconComponent className={`${colors.icon} text-xl`} size={24} />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900">{category.title}</h3>
+                  <h3 className="text-xl font-bold text-white">{category.title}</h3>
                 </div>
                 <div className="space-y-3">
                   {category.skills.map((skill, skillIndex) => (

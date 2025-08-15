@@ -65,11 +65,11 @@ export default function ProjectsSection() {
   };
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 glass-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">Featured Projects</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4">Featured Projects</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             A showcase of innovative solutions spanning Salesforce customizations, full-stack applications, and AI-driven platforms
           </p>
         </div>
@@ -78,14 +78,16 @@ export default function ProjectsSection() {
           {projects.map((project, index) => (
             <div 
               key={project.title}
-              className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden group"
+              className="glass-card rounded-2xl overflow-hidden group hover:transform hover:scale-105 transition-all duration-300"
               data-testid={`project-${index}`}
             >
-              <img 
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
+              <div className="glass-card rounded-xl m-4 mb-0 overflow-hidden">
+                <img 
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <div className="p-8">
                 <div className="flex items-center mb-4">
                   {project.tags.map((tag) => (
@@ -97,26 +99,26 @@ export default function ProjectsSection() {
                     </span>
                   ))}
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{project.title}</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
                   {project.description}
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="flex space-x-4">
                     <button 
-                      className="text-gray-500 hover:text-primary transition-colors duration-200"
+                      className="text-gray-400 hover:text-blue-300 transition-colors duration-200"
                       data-testid={`project-github-${index}`}
                     >
                       <Github size={18} />
                     </button>
                     <button 
-                      className="text-gray-500 hover:text-primary transition-colors duration-200"
+                      className="text-gray-400 hover:text-blue-300 transition-colors duration-200"
                       data-testid={`project-link-${index}`}
                     >
                       <ExternalLink size={18} />
                     </button>
                   </div>
-                  <span className="text-sm text-gray-500">{project.year}</span>
+                  <span className="text-sm text-gray-400">{project.year}</span>
                 </div>
               </div>
             </div>
@@ -125,7 +127,7 @@ export default function ProjectsSection() {
         
         <div className="text-center mt-12">
           <button 
-            className="inline-flex items-center px-8 py-4 bg-white text-primary font-medium rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-colors duration-200"
+            className="glass-button inline-flex items-center px-8 py-4 font-medium rounded-lg text-white"
             data-testid="view-all-projects"
           >
             <Github className="mr-2" size={20} />
