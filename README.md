@@ -1,0 +1,1 @@
+# Modern Next.js + TypeScript Portfolio\n\nRun:\n```bash\nnpm install\nnpm run dev\n```\nCustomize `content/site.ts`.
